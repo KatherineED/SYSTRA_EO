@@ -1,33 +1,21 @@
-### Prerequisites for Running the Notebook
+# Geospatial Data Analysis Using Machine Learning
 
-This notebook requires access to Google Earth Engine (GEE). If you do not already have a GEE account, please follow these steps:
+## Overview
 
-1. **Sign Up for Google Earth Engine**:
-   - Visit [Google Earth Engine Sign-Up](https://earthengine.google.com/signup/) to request access.
-   - Wait for the confirmation email from Google Earth Engine.
+This repository contains code for analyzing Earth Observation data using various machine learning techniques. It contains code for the creation of a Land Use Land Cover (LULC) model. Also two applied cases for an integrated assessment using the LULC model for change detection  and Normalised Vegetation Index (NDVI) calculation for vegetation health assessment. 
 
-2. **Install the GEE Python API**:
-   - Ensure you have the Earth Engine Python API installed by running:
-     ```bash
-     pip install earthengine-api
-     ```
+## Files in the Repository
 
-3. **Authenticate with Google Earth Engine**:
-   - When running the notebook, you will be prompted to authenticate. Use the following code:
-     ```python
-     import ee
-     from google.colab import auth
-   
-     auth.authenticate_user()
-     ee.Initialize()
-     ```
-   - If not using Google Colab, use:
-     ```python
-     ee.Authenticate()
-     ee.Initialize()
-     ```
+- **LULC_model_development**: Contains the code for the development of 12 Land Use and Land Cover (LULC) models, along with their performance metrics and visualization maps of the test data.
+- **Assessment_Glasgow**: Contains the integrated LULC and NDVI assessment for the city of Glasgow.
+- **Assessment_Newton_Mearns**: Contains the integrated LULC and NDVI assessment for the suburban town of Newton Mearns.
 
-4. **Run the Notebook**:
-   - Once authenticated, you can proceed with running the notebook.
+**Note**: The code has been pre-ran, so all the necessary outputs have been generated. However, the LULC classification and NDVI visualization maps may not be visible directly in the notebook because these visualizations require the Google Earth Engine (GEE) API. To properly view these maps, it is recommended to run the code again with access to the GEE API.
 
-If you encounter any issues, please refer to the [Google Earth Engine Documentation](https://developers.google.com/earth-engine/guides/python_install) for further assistance.
+## How to Run the Code
+
+To run the code and view the LULC classification and NDVI maps:
+
+1. Open the notebook in Google Colab.
+2. Press the `Run All` button to execute all cells.
+3. When prompted, grant all necessary permissions, including access to your Google account, to connect to the Google Earth Engine API.
